@@ -1,3 +1,80 @@
-h1 {
-  color: red;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+@media screen and (min-width: 375px) {
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    margin-left: 0.5rem;
+    justify-content: space-between;
+  }
+
+  .toolBar {
+    color: #6070ff;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  .firstSec {
+    display: flex;
+    flex-direction: column;
+    padding: 114px 24px;
+    width: 100%;
+  }
+
+  .intoHead {
+    color: #172b4d;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 52px;
+    margin-bottom: 12px;
+    width: 80%;
+  }
+
+  .intoDes {
+    color: #344563;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 12px;
+    width: 85%;
+  }
+
+  .contact {
+    color: #7f8cff;
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 20px;
+    word-wrap: break-word;
+    margin-bottom: 12px;
+  }
+
+  .social {
+    margin-top: 0.5rem;
+  }
+
+  .social > a {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: #505f79;
+  }
+
+  .vt:hover {
+    border: 1px solid black;
+    padding: 2px;
+  }
+
+  .social i:hover {
+    color: black;
+  }
 }
