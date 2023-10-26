@@ -10,18 +10,15 @@
 <body>
         <header class="header">
             <h2 class="toolBar">My Logo</h2>
-            <div class="toolBar">
-                <i class="fa-solid fa-bars"></i>
-            </div>   
-            <div class="navBar">
-                <ul>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
+            <div class="openMenu"><i class="fa-solid fa-bars"></i></div>   
+                <ul class="navBar">
+                    <li><a href="#portfolio" id="pf">Portfolio</a></li>
+                    <li><a href="#about" id="abt">About</a></li>
+                    <li><a href="#contact" id="cont">Contact</a></li>
                 </ul>
-            </div> 
+            <div class="closeMenu"> <i class="fa-solid fa-xmark"></i></div>
         </header>
-        <section class="firstSec">
+        <section class="firstSec" id="portfolio">
             <div class="firstPara">
                 <div class="intoHead">I’m Zin Theint. Glad to see you!</div>
                 <div class="intoDes">I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</div>
@@ -132,7 +129,7 @@
             </div>
         </section>
     
-        <section class="abtMyself">
+        <section class="abtMyself"  id="about">
             <div class="abtAll">
                 <div class="aboutMe">About Myself</div>
                 <div class="abtJob">Hello I’m a software developer! I can help you build a product , feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</div>
@@ -181,7 +178,7 @@
 
         <!-- contact section  -->
 
-        <section class="footer">
+        <section class="footer"  id="contact">
             <div class="contactHeader">  
                 <h1>Contact me</h1>
                 <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. 
@@ -200,6 +197,6 @@
             <img src="./img/Shape.png" alt=""> 
         </div>
 
-
+        <script src="./app.js"></script>
 </body>
 </html>

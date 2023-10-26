@@ -3,11 +3,62 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
   overflow-x: hidden;
+} 
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  margin-left: 0.5rem;
+  justify-content:space-between;
+
+}
+
+.toolBar {
+  color: #6070ff;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.openMenu,
+.closeMenu{
+  display: none;
+}
+
+.navBar{
+  display: flex;
+  list-style: none;
+  transition: 1s;
+}
+
+
+.navBar li{
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 20px;
+}
+
+.navBar li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #396df2;
+}
+
+.navBar a:hover {
+  font-weight: bold;
+  color:#003cd3; 
+  border-bottom: 1px solid #6d88cc;
 }
 
 .intoHead {
@@ -81,7 +132,6 @@ body {
 }
 
 .lg > span {
-  color: black;
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
@@ -212,12 +262,12 @@ body {
 
 .abtLg {
   margin: 24px 12px 0 12px;
+  color: #172b4d;
 }
 
 .lg {
   display: flex;
   flex-direction: column;
-  color: black;
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
@@ -250,7 +300,56 @@ body {
   margin: 0 16px 0 0;
 }
 
-@media screen and (min-width: 375px) {
+
+@media screen and (max-width: 768px) {
+
+  .navBar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+    align-items: flex-start;
+    padding-left: 30px;
+    background: #6070ff;
+    color: #ebebff;
+    opacity: 0.9;
+    transition:top 1s ease;
+    display: none;
+  }
+
+  .header .closeMenu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index:10;
+    color: #fff;
+  }
+
+  .header .openMenu {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: #396df2;
+  }
+
+  .navBar li a {
+    color: #ebebff;
+  }
+
+  .navBar li a:hover {
+    background: none;
+    color:black;
+    font-size: 1.32rem;
+    border-bottom: none;
+  }
+
   .firstSec {
     display: flex;
     flex-direction: column;
@@ -259,26 +358,6 @@ body {
     background-image: url("./img/mobileHeader.png");
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  .header {
-    display: flex;
-    align-items: center;
-    padding: 1.2rem;
-    margin-left: 0.5rem;
-    justify-content: space-between;
-  }
-
-  .toolBar {
-    color: #6070ff;
-    font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    line-height: 20px;
-  }
-
-  .navBar {
-    display: none;
   }
 
   .cards {
@@ -342,6 +421,16 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  
+  .header {
+    padding: 16px 143px;
+  }
+
+  .openMenu i,
+  .closeMenu i{
+    display: none;
+  }
+
   .firstSec {
     display: flex;
     flex-direction: column;
@@ -356,39 +445,6 @@ body {
     padding: 100px 200px;
   }
 
-  .header {
-    padding: 16px 143px;
-  }
-
-  .toolBar i {
-    display: none;
-  }
-
-  .navBar {
-    display: inline;
-  }
-
-  .navBar ul {
-    display: flex;
-  }
-
-  .navBar li {
-    padding: 12px 12px;
-    list-style: none;
-    color: #344563;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    line-height: 20px;
-  }
-
-  .navBar a {
-    text-decoration: none;
-  }
-
-  .navBar li:hover {
-    font-weight: bold;
-  }
 
   .cards {
     display: flex;
@@ -478,6 +534,8 @@ body {
   .lastImg {
     display: none;
   }
+
+ 
 }
 
 .footer {
@@ -551,3 +609,4 @@ body {
   color: white;
   font-weight: bold;
 }
+
