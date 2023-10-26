@@ -10,15 +10,14 @@
 html,
 body {
   overflow-x: hidden;
-} 
+}
 
 .header {
   display: flex;
   align-items: center;
   padding: 1.2rem;
   margin-left: 0.5rem;
-  justify-content:space-between;
-
+  justify-content: space-between;
 }
 
 .toolBar {
@@ -30,21 +29,26 @@ body {
 }
 
 .openMenu,
-.closeMenu{
+.closeMenu {
   display: none;
 }
 
-.navBar{
+.navBar {
   display: flex;
   list-style: none;
   transition: 1s;
 }
 
-
-.navBar li{
+.navBar li {
   font-size: 1.1rem;
   font-family: 'Poppins', sans-serif;
   line-height: 20px;
+}
+
+.social > a {
+  font-size: 1.5rem;
+  color: #505f79;
+  padding: 8px;
 }
 
 .navBar li a {
@@ -57,7 +61,7 @@ body {
 
 .navBar a:hover {
   font-weight: bold;
-  color:#003cd3; 
+  color: #003cd3;
   border-bottom: 1px solid #6d88cc;
 }
 
@@ -89,12 +93,6 @@ body {
   line-height: 20px;
   word-wrap: break-word;
   margin-bottom: 12px;
-}
-
-.social > a {
-  font-size: 1.5rem;
-  color: #505f79;
-  padding: 8px;
 }
 
 .vt:hover {
@@ -300,9 +298,7 @@ body {
   margin: 0 16px 0 0;
 }
 
-
 @media screen and (max-width: 768px) {
-
   .navBar {
     height: 100vh;
     position: fixed;
@@ -318,7 +314,7 @@ body {
     background: #6070ff;
     color: #ebebff;
     opacity: 0.9;
-    transition:top 1s ease;
+    transition: top 1s ease;
     display: none;
   }
 
@@ -327,7 +323,7 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index:10;
+    z-index: 10;
     color: #fff;
   }
 
@@ -345,7 +341,7 @@ body {
 
   .navBar li a:hover {
     background: none;
-    color:black;
+    color: black;
     font-size: 1.32rem;
     border-bottom: none;
   }
@@ -421,13 +417,12 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  
   .header {
     padding: 16px 143px;
   }
 
   .openMenu i,
-  .closeMenu i{
+  .closeMenu i {
     display: none;
   }
 
@@ -445,7 +440,6 @@ body {
     padding: 100px 200px;
   }
 
-
   .cards {
     display: flex;
     flex-direction: row;
@@ -461,11 +455,12 @@ body {
   }
 
   .img {
-    width: 50%;
+    width: 40%;
   }
 
   .cardDes {
-    width: 50%;
+    margin-left: 20px;
+    width: 55%;
     padding: 24px;
   }
 
@@ -534,8 +529,6 @@ body {
   .lastImg {
     display: none;
   }
-
- 
 }
 
 .footer {
@@ -609,4 +602,3 @@ body {
   color: white;
   font-weight: bold;
 }
-
