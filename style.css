@@ -13,11 +13,14 @@ body {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  /* background-color: white; */
   display: flex;
   align-items: center;
-  padding: 1.2rem;
-  margin-left: 0.5rem;
-  justify-content: space-between;
 }
 
 .toolBar {
@@ -298,7 +301,7 @@ body {
   margin: 0 16px 0 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 375px) {
   .navBar {
     height: 100vh;
     position: fixed;
@@ -311,11 +314,13 @@ body {
     padding-top: 100px;
     align-items: flex-start;
     padding-left: 30px;
-    background: #6070ff;
-    color: #ebebff;
-    opacity: 0.9;
     transition: top 1s ease;
     display: none;
+    backdrop-filter: blur(20px);
+  }
+
+  .header {
+    height: 3rem;
   }
 
   .header .closeMenu {
@@ -324,7 +329,8 @@ body {
     top: 20px;
     right: 20px;
     z-index: 10;
-    color: #fff;
+    color: #396df2;
+    cursor: pointer;
   }
 
   .header .openMenu {
@@ -333,16 +339,17 @@ body {
     top: 18px;
     right: 20px;
     color: #396df2;
+    cursor: pointer;
   }
 
   .navBar li a {
-    color: #ebebff;
+    color: #396df2;
   }
 
   .navBar li a:hover {
-    background: none;
-    color: black;
-    font-size: 1.32rem;
+    color: #003cd3;
+    font-size: 1.2rem;
+    transition: all 0.5s;
     border-bottom: none;
   }
 
@@ -424,6 +431,26 @@ body {
   .openMenu i,
   .closeMenu i {
     display: none;
+  }
+
+  .navBar {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding-top: 0;
+    background-color: white;
+    left: auto;
+    transition: none;
+  }
+
+  .navBar li a {
+    color: #396df2;
+    transition: font-size 0.5s;
+  }
+
+  .navBar li a:hover {
+    color: #003cd3;
+    font-size: 1.2rem;
   }
 
   .firstSec {

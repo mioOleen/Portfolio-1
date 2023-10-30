@@ -23,3 +23,4 @@ closeMenu.addEventListener('click', close);
 pf.addEventListener('click', close);
 abt.addEventListener('click', close);
 cont.addEventListener('click', close);
+
