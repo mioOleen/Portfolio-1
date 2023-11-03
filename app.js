@@ -87,3 +87,30 @@ function close(){
 }
 
 crossTag.addEventListener("click",close);
+
+//validation
+
+let form=document.querySelector("#formValidation");
+let email=document.querySelector(".email");
+let errorMsg=document.querySelector("#smallError");
+
+form.addEventListener("submit",(e)=>{
+  const message=[];
+
+  const inputEmail=email.value;
+
+  if( inputEmail!== inputEmail.toLowerCase()){
+    e.preventDefault();
+    errorMsg.classList.add("error");
+    errorMsg.textContent="Email must be in lowercase";
+  }else{
+    errorMsg.textContent='';
+  }
+
+  if(message.length<0){
+    e.preventDefault();
+    errorMsg.innerHTML=message.join(',');
+  }
+
+  
+})
