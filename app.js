@@ -92,7 +92,7 @@ crossTag.addEventListener("click",close);
 
 let form=document.querySelector("#formValidation");
 let email=document.querySelector(".email");
-let errorMsg=document.querySelector("#error");
+let errorMsg=document.querySelector("#smallError");
 
 form.addEventListener("submit",(e)=>{
   const message=[];
@@ -101,6 +101,7 @@ form.addEventListener("submit",(e)=>{
 
   if( inputEmail!== inputEmail.toLowerCase()){
     e.preventDefault();
+    errorMsg.classList.add("error");
     errorMsg.textContent="Email must be in lowercase";
   }else{
     errorMsg.textContent='';
