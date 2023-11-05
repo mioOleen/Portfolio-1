@@ -12,6 +12,12 @@ body {
   overflow-x: hidden;
 }
 
+#blur.active {
+  filter: blur(10px);
+  user-select: none;
+  pointer-events: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -365,6 +371,12 @@ body {
     display: flex;
     align-items: center;
   }
+
+  .switch a {
+    text-decoration: none;
+    color: #6070ff;
+  }
+
 
   .switch img {
     width: 1rem;

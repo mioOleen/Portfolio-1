@@ -39,30 +39,42 @@ let projects=[
   image:'./img/portfolio1.png',
   description:"First project Lorem Ipsum is  paragraph simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
   techo:["HTML","CSS","JavaScript"],
+  demo:'https://miooleen.github.io/',
+  source: 'https://github.com/mioOleen/Portfolio-1',
  },
  {
   title:"Multi-Post Stories",
   image:'./img/portfolio2.png',
   description:"Second project Lorem Ipsum is  paragraph simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
   techo:["HTML","CSS","JavaScript"],
+  demo:'https://miooleen.github.io/',
+  source: 'https://github.com/mioOleen/Portfolio-1',
  },
  {
   title:"Tonic",
   image:'./img/portfolio3.png',
   description:"Third project Lorem Ipsum is  paragraph simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
   techo:["HTML","CSS","JavaScript"],
+  demo:'https://miooleen.github.io/',
+  source: 'https://github.com/mioOleen/Portfolio-1',
  },
  {
   title:"Multi-Post Stories",
   image:'./img/portfolio4.png',
   description:"Fourth project Lorem Ipsum is  paragraph simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
   techo:["HTML","CSS","JavaScript"],
+  demo:'https://miooleen.github.io/',
+  source: 'https://github.com/mioOleen/Portfolio-1',
  }
 ]
-
+let blur=document.getElementById("blur");
+let liveBtn=document.querySelector("#liveBtn");
+let sourceBtn=document.querySelector("#sourceBtn");
 document.querySelectorAll('.cards .btn').forEach(card=>{ 
+ 
    card.onclick=()=>{
-  
+    blur.classList.add("active");
+    
     let id=card.getAttribute("title");
     detailTag.style.display="block";
     nameTag.textContent=projects[id].title;
@@ -79,11 +91,16 @@ document.querySelectorAll('.cards .btn').forEach(card=>{
       li.append(projects[id].techo[i]);
       technoTag.append(li);
      }
+     
+     liveBtn.setAttribute("href",projects[id].demo);
+     sourceBtn.setAttribute("href",projects[id].source);
+
    }
 })
 
 function close(){
   detailTag.style.display="none";
+  blur.classList.remove("active");
 }
 
 crossTag.addEventListener("click",close);
