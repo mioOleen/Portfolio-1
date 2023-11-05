@@ -20,9 +20,9 @@ function closeMe() {
 
 openMenu.addEventListener('click', show);
 // closeMenu.addEventListener('dblclick', closeMe);
-pf.addEventListener('click', close);
-abt.addEventListener('click', close);
-cont.addEventListener('click', close);
+pf.addEventListener('click', closeMe);
+abt.addEventListener('click', closeMe);
+cont.addEventListener('click', closeMe);
 
 //detail popup
 
