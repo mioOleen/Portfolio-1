@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+       <div id="blur">
         <header class="header">
             <h2 class="toolBar">My Logo</h2>
             <div class="openMenu"><i class="fa-solid fa-bars"></i></div>   
@@ -34,33 +35,7 @@
         </section>
 
         <section class="works">
-            <div class="detail">
-                <span class="cross">&times;</span>
-                    <h1 id="projectName"></h1>
-                <div class="list">
-                    <span>CANOPY</span>
-                    <ul>
-                        <li>Back End Dev</li>
-                        <li>2015</li>
-                    </ul>
-                </div>
-         
-                <img src="" alt="" id="pjImg">
-             
-                <div class="status">
-                    <p id="paragraph"></p>
-
-                    <div class="language">   
-                    <ul class="techno"> 
-                    </ul>
-
-                    <div class="switch">
-                        <button class="liveBtn">See Live <img src="./img/liveIcon.svg" alt=""> </button>
-                        <button class="sourceBtn">See Source <img src="./img/gitFrame.png" alt=""></button>
-                    </div>     
-                </div>
-                </div>
-            </div>
+           
             <div class="cards">
                     <img src="./img/portfolio1.png" class="img">
                     <div class="cardDes">
@@ -222,6 +197,42 @@
 
         <div class="lastImg">
             <img src="./img/Shape.png" alt=""> 
+        </div>
+       </div>
+
+
+        <div class="detail">
+            <span class="cross">&times;</span>
+                <h1 id="projectName"></h1>
+            <div class="list">
+                <span>CANOPY</span>
+                <ul>
+                    <li>Back End Dev</li>
+                    <li>2015</li>
+                </ul>
+            </div>
+     
+            <img src="" alt="" id="pjImg">
+         
+            <div class="status">
+                <p id="paragraph"></p>
+
+                <div class="language">   
+                <ul class="techno"> 
+                </ul>
+
+                <div class="switch">
+                    <button class="liveBtn">
+                        <a href="" id="liveBtn" target="_blank">See Live </a>
+                        <img src="./img/liveIcon.svg" alt=""> 
+                    </button>
+                    <button class="sourceBtn">
+                        <a href="" id="sourceBtn" target="_blank">See Source</a>
+                         <img src="./img/gitFrame.png" alt="">
+                    </button>
+                </div>     
+            </div>
+            </div>
         </div>
 
         <script src="./app.js"></script>
