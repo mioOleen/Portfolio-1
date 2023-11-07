@@ -128,6 +128,33 @@ form.addEventListener("submit",(e)=>{
     e.preventDefault();
     errorMsg.innerHTML=message.join(',');
   }
-
-  
 })
+
+//local storage 
+
+let inputTag=document.querySelectorAll("#inputField");
+let userData={};
+
+function saveUserDatas(){
+  inputTag.forEach((inputData) => {
+  userData[inputData.name] = inputData.value;
+  let userDataInJson = JSON.stringify(userData);
+  localStorage.setItem('userData', userDataInJson);
+  })
+}
+
+function getData() {
+  let userDataFromJson = localStorage.getItem('userData');
+  if (userDataFromJson) {
+     let getUserData = JSON.parse(userDataFromJson);
+     inputTag.forEach((inputInfo) => {
+      inputInfo.value = getUserData[inputInfo.name];
+    });
+  }
+}
+
+inputTag.forEach((inputInfo)=>{
+  inputInfo.addEventListener("change",saveUserDatas);
+})
+
+window.addEventListener("load", getData);
