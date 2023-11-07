@@ -834,7 +834,17 @@ body {
 }
 
 .btnGet:hover {
-  background-color: #172b4d;
+  background-color: #4062ba;
   color: white;
   font-weight: bold;
+}
+
+.error {
+  display: inline-block;
+  color: red;
+  background-color: #b3bac5;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 }
