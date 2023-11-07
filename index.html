@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+       <div id="blur">
         <header class="header">
             <h2 class="toolBar">My Logo</h2>
             <div class="openMenu"><i class="fa-solid fa-bars"></i></div>   
@@ -34,33 +35,7 @@
         </section>
 
         <section class="works">
-            <div class="detail">
-                <span class="cross">&times;</span>
-                    <h2 id="projectName"></h2>
-                <div class="list">
-                    <span>CANOPY</span>
-                    <ul>
-                        <li>Back End Dev</li>
-                        <li>2015</li>
-                    </ul>
-                </div>
-         
-                <img src="" alt="" id="pjImg">
-             
-                <div class="status">
-                    <p id="paragraph"></p>
-
-                    <div class="language">   
-                    <ul class="techno"> 
-                    </ul>
-
-                    <div class="switch">
-                        <button class="liveBtn">See Live <img src="./img/liveIcon.svg" alt=""> </button>
-                        <button class="sourceBtn">See Source <img src="./img/gitFrame.png" alt=""></button>
-                    </div>     
-                </div>
-                </div>
-            </div>
+           
             <div class="cards">
                     <img src="./img/portfolio1.png" class="img">
                     <div class="cardDes">
@@ -212,10 +187,9 @@
                     I’d love to help with it!
                 </p>
                
-                <!-- action="https://formspree.io/f/{form_id}" method="post" -->
-                <form  id="formValidation">
-                    <input type="text" name="name" class="lorem" placeholder="Lorem Ipsum" id="inputField" required></input>
-                    <input type="email" name="email" class="email" placeholder="loremipsum@gmail.com" id="inputField"></input>
+                <form  action="https://formspree.io/f/mqkvglvj" method="post" id="formValidation">
+                    <input type="text" name="name" class="lorem" placeholder="Enter your name" required></input>
+                    <input type="email" name="email" class="email" placeholder="Enter your email"></input>
                     <small id="smallError"></small>
                     <textarea class="textArea" name="comment" rows="8" placeholder="Write your message here..." maxlength="500" required id="inputField"></textarea>
                     <button type="submit" class="btnGet">Get in touch</button>     
@@ -225,6 +199,42 @@
 
         <div class="lastImg">
             <img src="./img/Shape.png" alt=""> 
+        </div>
+       </div>
+
+
+        <div class="detail">
+            <span class="cross">&times;</span>
+                <h1 id="projectName"></h1>
+            <div class="list">
+                <span>CANOPY</span>
+                <ul>
+                    <li>Back End Dev</li>
+                    <li>2015</li>
+                </ul>
+            </div>
+     
+            <img src="" alt="" id="pjImg">
+         
+            <div class="status">
+                <p id="paragraph"></p>
+
+                <div class="language">   
+                <ul class="techno"> 
+                </ul>
+
+                <div class="switch">
+                    <button class="liveBtn">
+                        <a href="" id="liveBtn" target="_blank">See Live </a>
+                        <img src="./img/liveIcon.svg" alt=""> 
+                    </button>
+                    <button class="sourceBtn">
+                        <a href="" id="sourceBtn" target="_blank">See Source</a>
+                         <img src="./img/gitFrame.png" alt="">
+                    </button>
+                </div>     
+            </div>
+            </div>
         </div>
 
         <script src="./app.js"></script>
